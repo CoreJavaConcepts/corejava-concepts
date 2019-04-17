@@ -1,0 +1,4 @@
+Writing from PrintWriter
+d100
+true
+C
