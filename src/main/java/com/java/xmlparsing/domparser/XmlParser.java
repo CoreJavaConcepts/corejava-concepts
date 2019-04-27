@@ -1,4 +1,4 @@
-package com.java.xmlparsing;
+package com.java.xmlparsing.domparser;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -16,7 +16,8 @@ public class XmlParser {
             //------DOM Parser
             // Main things DocumentBuilderFactory, DocumentBuilder, Document
             // NodeList, Node, Element
-            File file = new File("F:\\Tutorials\\Java\\CoreJavaConcepts\\src\\com\\java\\xmlparsing\\student.xml");
+            //doc.getElementsByTagName
+            File file = new File("F:\\Tutorials\\Java\\CoreJavaConcepts\\src\\com\\java\\xmlparsing\\domparser\\student.xml");
 
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();// check import, its javax.xml
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
@@ -27,7 +28,7 @@ public class XmlParser {
             NodeList nList = doc.getElementsByTagName("student");//-------------------method getElementsByTagName
 
             for(int i=0; i < nList.getLength() ; i++){
-                Node node = nList.item(i);//-----------------.items
+                Node node = nList.item(i);//-----------------.item
                 System.out.println("\nCurrent Element :" + node.getNodeName());
 
                 if(node.getNodeType() == Node.ELEMENT_NODE){//..............getNodeType

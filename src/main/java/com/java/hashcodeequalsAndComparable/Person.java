@@ -1,10 +1,11 @@
-package com.java.hashcodeequals;
+package com.java.hashcodeequalsAndComparable;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String firstName;
     private String lastName;
+
 
     public String getFirstName() {
         return firstName;
@@ -20,6 +21,33 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    @Override
+    public int compareTo(Person person) {//Need to make null safe as well
+        if(this.firstName == null && person.firstName != null){//First compare by firstname
+            return -1;
+        }
+
+        if(this.firstName != null && person.firstName == null){
+            return 1;
+        }
+
+        if(this.firstName != null && person.firstName != null){
+            this.firstName.compareTo(person.firstName);
+        }
+
+        if(this.lastName == null && person.lastName != null){//then compare by lastname
+            return -1;
+        }
+
+        if(this.lastName != null && person.lastName == null){
+            return 1;
+        }
+
+
+
+        return 0;
     }
 
     //https://www.sitepoint.com/implement-javas-equals-method-correctly/
