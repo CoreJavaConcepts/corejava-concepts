@@ -14,7 +14,7 @@ public class XmlParser {
 
         try{
             //------DOM Parser
-            // Main things DocumentBuilderFactory, DocumentBuilder, Document
+            // Main things DocumentBuilderFactory, DocumentBuilder.parse, Document
             // NodeList, Node, Element
             //doc.getElementsByTagName
             File file = new File("F:\\Tutorials\\Java\\CoreJavaConcepts\\src\\com\\java\\xmlparsing\\domparser\\student.xml");

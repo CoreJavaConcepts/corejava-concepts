@@ -95,6 +95,8 @@ public class Person implements Comparable<Person>{
         //if(obj == null || obj.getClass() != this.getClass()) return false;
         //Use getClass and be aware that instances of the type and its subtypes can never equal.
 
+        //equals contract
+
 
         //compare fields
         Person person = (Person)obj;
